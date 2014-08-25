@@ -1,0 +1,25 @@
+@media all {
+	.mod-accordion {
+		.hd { // h3 element
+			display: block;
+			padding: 1em;
+			margin: 0;
+			background: ThreeDFace;
+		}
+		.bd {
+			border: 2px solid WindowFrame;
+			overflow: hidden;
+			visibility: visible;
+			&:target {
+				visibility: visible;
+			}
+		}
+		&.state-closed {
+			.bd {
+				visibility: hidden; // to do: vis-hidden
+			}
+		}
+	}
+}
+@media screen {}
+@media print {}
