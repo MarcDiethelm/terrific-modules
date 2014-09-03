@@ -1,0 +1,27 @@
+{
+  "name": "terrific-modules",
+  "version": "0.0.0",
+  "description": "Reusable Terrific.js modules",
+  "main": "bin/httpd.js",
+  "bin": {
+    "terrific-modules": "httpd.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarcDiethelm/terrific-modules.git"
+  },
+  "keywords": [
+    "terrific.js",
+    "modules"
+  ],
+  "author": "Marc Diethelm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarcDiethelm/terrific-modules/issues"
+  },
+  "homepage": "https://github.com/MarcDiethelm/terrific-modules",
+  "port": 3333
+}
