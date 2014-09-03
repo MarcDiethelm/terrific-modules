@@ -11,5 +11,6 @@ Reusable Terrific.js modules.
 	- config file to persist options for a target project
 - This project needs to be versioned, because there will be some framework-like interdependencies
 - Modules include tests (using a js-based runner)
-- Include a overview page/site
-- Include mini site/server (node.js) so overview can be run/displayed locally.
+- Modules may include Readme.md (using a js-based runner)
+- Implement a overview page/site
+- Implement mini site/server (node.js) so overview can be run/displayed locally.

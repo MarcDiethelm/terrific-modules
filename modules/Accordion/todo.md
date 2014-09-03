@@ -1,5 +1,0 @@
-- readme
-- tests
-- decide what structure to use in repo
-	- classic terrific or
-	- xtc
