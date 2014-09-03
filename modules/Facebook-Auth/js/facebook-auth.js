@@ -244,12 +244,10 @@
 				accessToken: accessToken
 			});
 
-			$.ajax(uri, {
-					type: 'GET',
-					crossDomain: true
-				})
-				.success(this.normalizeAjaxCallbacks('success', this.onResponseUserProfile))
-				.error(this.normalizeAjaxCallbacks('error', this.onResponseUserProfile))
+			$.get(uri)
+				.done(this.normalizeAjaxCallbacks('done'))
+				.fail(this.normalizeAjaxCallbacks('fail'))
+				.callback = this.onResponseUserProfile
 			;
 		},
 
@@ -268,8 +266,9 @@
 					type: 'DELETE',
 					crossDomain: true
 				})
-				.success(this.normalizeAjaxCallbacks('success', this.onResponseDeauthorize))
-				.error(this.normalizeAjaxCallbacks('error', this.onResponseDeauthorize))
+				.done(this.normalizeAjaxCallbacks('done'))
+				.fail(this.normalizeAjaxCallbacks('fail'))
+				.callback = this.onResponseDeauthorize
 			;
 		},
 
@@ -278,13 +277,13 @@
 		 * @param type
 		 * @param callback
 		 */
-		normalizeAjaxCallbacks: function(type, callback) {
-			if ('success' === type) {
-				return function() { callback(null, arguments[0], arguments[2], arguments[1]) };
+		normalizeAjaxCallbacks: function(type) { // todo: refactor to "Utils"?
+			if ('done' === type) { // incoming params: data, textStatus, jqXHR
+				return function() { var args = arguments; args[2].callback(null, args[0], args[2], args[1]) };
 			}
-			else if ('error' === type) {
+			else if ('fail' === type) { // incoming params: jqXHR, textStatus, errorThrown
 				var data = arguments[0].responseJSON || null;
-				return function () { callback(arguments[0], data, arguments[0], arguments[1]) };
+				return function () { var args = arguments; args[0].callback(args[2], data, args[0], args[1]) };
 			}
 		},
 
@@ -295,7 +294,7 @@
 			by Sindre Sorhus
 			MIT License
 		*/
-		parseQueryString: function(str) {
+		parseQueryString: function(str) { // todo: refactor to "Utils"?
 			if (typeof str !== 'string') {
 				return {};
 			}
