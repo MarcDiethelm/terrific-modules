@@ -62,7 +62,7 @@
 
 	// Set some defaults for all module instances. (In case there is more than one.)
 	var appId; // set here or in markup
-	var redirectUri = window.location.href;  // set here or in markup
+	var redirectUri = location.protocol + '//' + location.host + location.pathname;  // set here or in markup [can't use location.href because after roundtrip this can include queries]
 	var responseType = 'token'; // best for client-side auth
 	var dialogUriTpl = 'https://www.facebook.com/dialog/oauth?client_id={{=appId}}&redirect_uri={{=redirectUri}}&response_type={{=responseType}}';
 	// used to get the user id, which is necessary for almost everything else, incl. deauthorization
