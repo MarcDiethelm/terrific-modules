@@ -1,25 +1,48 @@
-@media all {
-	.mod-accordion {
-		.hd { // h3 element
-			display: block;
-			padding: 1em;
-			margin: 0;
-			background: ThreeDFace;
+.mod-Accordion {
+	.bd-state-open() {
+		height: auto;
+		border: 2px solid WindowFrame;
+	}
+	.bd-state-closed() {
+		height: 0;
+		border: none;
+	}
+
+	.hd { // h3 element
+		display: block;
+		padding: 1em;
+		margin: 0;
+		background: ThreeDFace;
+	}
+
+	.bd {
+		overflow: hidden;
+	}
+
+	// all sections are visually closed by default but still there for screen readers, etc...
+	// this is dictated by the use of :target and the URL hash for .no-js use. there can only be one active target.
+	// to set a section to the open state add the .state-open class on the .section-accordion element
+	@media screen {
+		// No JS (accessibility)
+		.no-js & {
+			// using :not to override .state-open
+			.bd:not(:target) {
+				.bd-state-closed();
+			}
+			.bd:target {
+				.bd-state-open();
+			}
 		}
+		// With JS support
 		.bd {
-			border: 2px solid WindowFrame;
-			overflow: hidden;
-			visibility: visible;
-			&:target {
-				visibility: visible;
-			}
+			.bd-state-closed();
 		}
-		&.state-closed {
-			.bd {
-				visibility: hidden; // to do: vis-hidden
-			}
+		.state-open .bd {
+			.bd-state-open();
 		}
 	}
+
+	//@media print {}
 }
-@media screen {}
-@media print {}
+
+
