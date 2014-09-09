@@ -5,7 +5,7 @@ Documentation for the Terrific module
 
 ## Summary
 
-Semtically correct and accessible accordion, with some simple configurable options. Supports multiple sections which can be open exclusively or independently.
+Semantically correct and accessible accordion, with some simple configurable options. Supports single and multiple sections which can be open exclusively or independently.
 
 ## Need to know
 
@@ -22,7 +22,22 @@ The default behavior of the module is that only one section open at a time. This
 
 ## Markup
 
-...
+```html
+<section class="mod mod-Accordion">
+	<section class="section-accordion js-section">
+		<h3 class="hd js-hd"><a href="#accordion-1-bd-1">Accordion section title</a></h3>
+		<div id="accordion-1-bd-1" class="bd js-bd text">
+				Body content of accordion section
+		</div>
+	</section>
+	<section class="section-accordion js-section state-open">
+		<h3 class="hd js-hd"><a href="#accordion-1-bd-2">Accordion section title</a></h3>
+		<div id="accordion-1-bd-2" class="bd js-bd text">
+			Body content of accordion section
+		</div>
+	</section>
+</section>
+```
 
 ## Dependencies
 
