@@ -5,7 +5,7 @@ Documentation for the Terrific module
 
 ## Summary
 
-Semantically correct and accessible accordion, with some simple configurable options. Supports single and multiple sections which can be open exclusively or independently.
+Semantically correct and accessible accordion, with some simple configuration options. Supports single and multiple sections which can be open exclusively or independently.
 
 ## Need to know
 

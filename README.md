@@ -19,3 +19,9 @@ Reusable Terrific.js modules.
 
 - terrific-extensions.js
 - IE 8 and lower require [Selectivizr.js](http://selectivizr.com/) a CSS3 selectors polyfill.
+
+## Todo
+
+- [ ] Module tests
+- [ ] Demo site
+- All the tasks from the brainstorm
