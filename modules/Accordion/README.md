@@ -23,16 +23,16 @@ The default behavior of the module is that only one section open at a time. This
 ## Markup
 
 ```html
-<section class="mod mod-Accordion">
+<section class="mod mod-accordion [data-mode=independent]">
 	<section class="section-accordion js-section">
 		<h3 class="hd js-hd"><a href="#accordion-1-bd-1">Accordion section title</a></h3>
-		<div id="accordion-1-bd-1" class="bd js-bd text">
-				Body content of accordion section
+		<div id="accordion-1-bd-1" class="bd js-bd">
+			Body content of accordion section
 		</div>
 	</section>
-	<section class="section-accordion js-section state-open">
+	<section class="section-accordion js-section [state-open]">
 		<h3 class="hd js-hd"><a href="#accordion-1-bd-2">Accordion section title</a></h3>
-		<div id="accordion-1-bd-2" class="bd js-bd text">
+		<div id="accordion-1-bd-2" class="bd js-bd">
 			Body content of accordion section
 		</div>
 	</section>
