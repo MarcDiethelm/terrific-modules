@@ -19,11 +19,10 @@
 
 		init: function($ctx, sandbox, modId) {
 			this._super($ctx, sandbox, modId);
-			this.model = {};
-			this
-				.bindAll(
-					'onClickHead'
-				);
+			this.model = {}; // set model per module instance
+			this.bindAll(
+				'onClickHead'
+			);
 
 			// `data-mode=exclusive` - (default) only one section open at a time
 			// `data-mode=independent` - sections open and close independently
