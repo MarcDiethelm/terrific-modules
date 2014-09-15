@@ -52,9 +52,12 @@
 			else {
 				for (id in this.model) {
 					if (!this.model.hasOwnProperty(id)) continue;
-					// close other section if open
-					if (id !== evSectionId && this.model[evSectionId].state) {
-						this.toggleSectionState(id);
+
+					if (id !== evSectionId) {
+						// close other section if open
+						if (this.model[id].state) {
+							this.toggleSectionState(id);
+						}
 					}
 					// toggle clicked section
 					else {
