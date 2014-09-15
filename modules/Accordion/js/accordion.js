@@ -30,8 +30,8 @@
 			this.populateModel();
 		},
 
-		on: function(callback) {
-			this.$(this.selectors.head).on('click', this.onClickHead);
+		on: function (callback) {
+			this.$ctx.on('click', this.selectors.head, this.onClickHead);
 			callback();
 		},
 
@@ -39,7 +39,7 @@
 
 		onClickHead: function(ev) {
 			ev.preventDefault();
-			var id = $(ev.target).closest(this.selectors.section).data('section-id');
+			var id = $(ev.currentTarget).closest(this.selectors.section).data('section-id');
 			this.setState(id);
 		},
 
