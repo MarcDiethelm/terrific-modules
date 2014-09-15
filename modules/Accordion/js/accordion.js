@@ -68,9 +68,10 @@
 			var section, state;
 
 			section = this.model[sectionId];
-			state = !section.state;
-			$(section.el).toggleClass('state-open', state);
-			return section.state = state;
+			section.state = !section.state;
+			$(section.el).toggleClass('state-open', section.state);
+
+			return section.state;
 		},
 
 		populateModel: function() {
