@@ -37,11 +37,19 @@
 
 		after: function() {},
 
+
+		//////////////////////////////////////////////////////////////////
+		// EVENT HANDLERS
+
 		onClickHead: function(ev) {
 			ev.preventDefault();
 			var id = $(ev.currentTarget).closest(this.selectors.section).data('section-id');
 			this.setState(id);
 		},
+
+
+		//////////////////////////////////////////////////////////////////
+		// METHODS
 
 		setState: function(evSectionId) {
 			var id;
