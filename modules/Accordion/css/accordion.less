@@ -27,8 +27,13 @@
 	// this is dictated by the use of :target and the URL hash for .no-js use. there can only be one active target.
 	// to set a section to the open state add the .state-open class on the .section-accordion element
 	@media screen {
-		// No JS (accessibility)
+
+		// No JS support (accessibility)
 		.no-js & {
+			// state icon: not needed
+			.hd a[href]:before {
+				content: normal;
+			}
 			// using :not to override .state-open
 			.bd:not(:target) {
 				.bd-state-closed();
@@ -37,12 +42,25 @@
 				.bd-state-open();
 			}
 		}
-		// With JS support
+
+		// JS supported
+		.hd a::before { // state icon: closed
+			content: '▲';
+			float: right;
+			font-size: 2rem;
+		}
 		.bd {
 			.bd-state-closed();
 		}
-		.state-open .bd {
-			.bd-state-open();
+		.state-open {
+			.hd {
+				a:before { // state icon: open
+					content: '▼';
+				}
+			}
+			.bd {
+				.bd-state-open();
+			}
 		}
 	}
 
