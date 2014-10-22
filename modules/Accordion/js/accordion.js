@@ -13,7 +13,7 @@
 
 		selectors: {
 			section: '.js-section',
-			head: '.js-hd',
+			head: '.js-hd a',
 			body: '.js-bd'
 		},
 
