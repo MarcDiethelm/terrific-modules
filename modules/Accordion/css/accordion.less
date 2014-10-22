@@ -1,7 +1,9 @@
 .mod-Accordion {
+	@dev-border: 2px solid WindowFrame;
+	border-bottom: @dev-border;
 	.bd-state-open() {
 		height: auto;
-		border: 2px solid WindowFrame;
+		border-top: @dev-border;
 	}
 	.bd-state-closed() {
 		height: 0;
@@ -10,7 +12,6 @@
 
 	.hd { // h3 element
 		margin: 0;
-		background: ThreeDFace;
 		border-top: @dev-border;
 		a {
 			display: block;
