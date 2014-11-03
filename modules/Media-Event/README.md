@@ -5,11 +5,24 @@ Documentation for the Terrific module
 
 ## Summary
 
+Media query "events" for JS, based on Terrific connectors.  
+For an example how to consume the events see _Media-Event-Consumer_ module, which implements dynamic loading of images based on the media queries.
+
 ## Need to know
+
+Depends on Enquire.js and for older browsers a matchMedia/matchMedia.addListener polyfill. Both are already present in `lib/`.
+
+Connector callbacks receive a simple data object containing two properties:
+- `query` {Object}
+    - `query.name` contains the viewport name
+    - `query.string` the matched media query.
+- `state` {'match'|'setup'} -  _setup_ is sent during page load only, _match_ during pge load and all viewport changes.
 
 ## Dependencies
 
-- none
+- [Enquire.js](http://wicky.nillia.ms/enquire.js/)
+- [matchMedia polyfill](https://github.com/paulirish/matchMedia.js) (optional)
+- [matchMedia.addListener polyfill](https://github.com/paulirish/matchMedia.js) (optional)
 
 ---
 

@@ -3,6 +3,7 @@
 	 * MediaEventConsumer module implementation.
 	 *
 	 * This module is mostly here as an example of how to consume media events. The example subject is an adaptive images implementation.
+	 * see Media-Event's Readme.md for documentation
 	 *
 	 * @author Marc Diethelm
 	 * @namespace Tc.Module
@@ -55,7 +56,11 @@
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// CONNECTOR CALLBACKS
 
-		onViewportChange: function (data) {
+		/**
+		 * Media-Event's Readme.md for documentation
+		 * @param data
+		 */
+		onViewportChange: function(data) {
 			var viewport = this.viewport = data.query.name;
 
 			switch (viewport) {

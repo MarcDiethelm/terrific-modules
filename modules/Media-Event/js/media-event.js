@@ -1,11 +1,8 @@
-/**
- * http://wicky.nillia.ms/enquire.js/
- */
-
-
 (function($) {
 	/**
 	 * MediaEvent module implementation.
+	 *
+	 * see Readme.md for documentation
 	 *
 	 * @author Marc Diethelm
 	 * @namespace Tc.Module
