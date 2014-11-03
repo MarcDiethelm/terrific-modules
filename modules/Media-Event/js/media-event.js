@@ -139,7 +139,7 @@
 		},
 
 		onViewportMatch: function (query, state) {
-			console.info('viewport is: %s', query.name); // development only
+			console.info('viewport is: %s [%s]', query.name, state); // development only
 			this.fire('viewportChange', {query: query, state: state}, ['matchMedia']);
 		}
 	});

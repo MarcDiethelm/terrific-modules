@@ -12,6 +12,8 @@
 	 */
 	Tc.Module.MediaEventConsumer = Tc.Module.extend({
 
+		viewport: null, // todo: make generic using a global config
+
 		selectors: {
 			imageContainer: '.js-adaptive-image'
 		},
@@ -29,7 +31,6 @@
 			// call base constructor
 			this._super($ctx, sandbox, modId);
 			this.subscribe('matchMedia');
-			this.viewport = 'small'; // todo: make generic using a global config
 		},
 
 		/**
@@ -61,8 +62,18 @@
 		 * @param data
 		 */
 		onViewportChange: function(data) {
-			var viewport = this.viewport = data.query.name;
+			var viewport = data.query.name;
 
+			// conditional matching: distinguish between "setup" and "match", and only execute per viewport match/change.
+			if ('setup' === data.state) {
+				//log('init viewport state')
+			}
+			else if (this.viewport !== viewport) {
+				//log('update viewport state')
+			}
+			this.viewport = viewport;
+
+			// dumb matching: executes for "setup" and "match", may execute twice per viewport match/change.
 			switch (viewport) {
 				case 'small':
 					// this.doStuff()
