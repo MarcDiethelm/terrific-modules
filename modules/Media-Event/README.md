@@ -8,6 +8,8 @@ Documentation for the Terrific module
 Media query "events" for JS, based on Terrific connectors.  
 For an example how to consume the events see [Media-Event-Consumer](https://github.com/MarcDiethelm/terrific-modules/tree/develop/modules/Media-Event-Consumer) module, which implements dynamic loading of images based on the media queries.
 
+Based on a previous implementation by [Simon Harte](https://github.com/SimonHarte).
+
 ## Need to know
 
 Depends on Enquire.js and for older browsers a matchMedia/matchMedia.addListener polyfill. Both are already present in `lib/`.
