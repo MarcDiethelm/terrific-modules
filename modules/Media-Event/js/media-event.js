@@ -41,7 +41,7 @@
 					'onViewportMatch'
 				)
 				// subscribe module to terrific channel "media"
-				.subscribe('media')
+				.subscribe('matchMedia')
 			;
 
 			var breakPoints = this.breakPoints;
@@ -140,7 +140,7 @@
 
 		onViewportMatch: function (query, state) {
 			console.info('viewport is: %s', query.name); // development only
-			this.fire('viewportChange', {query: query, state: state}, ['media']);
+			this.fire('viewportChange', {query: query, state: state}, ['matchMedia']);
 		}
 	});
 })(Tc.$);

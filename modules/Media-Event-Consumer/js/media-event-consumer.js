@@ -28,7 +28,7 @@
 		init: function($ctx, sandbox, modId) {
 			// call base constructor
 			this._super($ctx, sandbox, modId);
-			this.subscribe('media');
+			this.subscribe('matchMedia');
 			this.viewport = 'small'; // todo: make generic using a global config
 		},
 
