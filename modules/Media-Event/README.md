@@ -6,7 +6,7 @@ Documentation for the Terrific module
 ## Summary
 
 Media query "events" for JS, based on Terrific connectors.  
-For an example how to consume the events see _Media-Event-Consumer_ module, which implements dynamic loading of images based on the media queries.
+For an example how to consume the events see [Media-Event-Consumer](https://github.com/MarcDiethelm/terrific-modules/tree/develop/modules/Media-Event-Consumer) module, which implements dynamic loading of images based on the media queries.
 
 ## Need to know
 
