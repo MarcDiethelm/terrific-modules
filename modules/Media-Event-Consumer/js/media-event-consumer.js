@@ -69,6 +69,7 @@
 					break;
 				case 'medium':
 				case 'large':
+				case 'x-large':
 					this.loadAdaptiveImages(this.$ctx);
 					break;
 			}
