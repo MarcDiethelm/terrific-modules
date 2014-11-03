@@ -12,7 +12,7 @@ For an example how to consume the events see _Media-Event-Consumer_ module, whic
 
 Depends on Enquire.js and for older browsers a matchMedia/matchMedia.addListener polyfill. Both are already present in `lib/`.
 
-Connector callbacks receive a simple data object containing two properties:
+The connector callback `onViewportChange` receives a simple data object containing two properties:
 - `query` {Object}
     - `query.name` contains the viewport name
     - `query.string` the matched media query.
@@ -21,8 +21,8 @@ Connector callbacks receive a simple data object containing two properties:
 ## Dependencies
 
 - [Enquire.js](http://wicky.nillia.ms/enquire.js/)
-- [matchMedia polyfill](https://github.com/paulirish/matchMedia.js) (optional)
-- [matchMedia.addListener polyfill](https://github.com/paulirish/matchMedia.js) (optional)
+- [matchMedia polyfill](https://github.com/paulirish/matchMedia.js) ([optional](http://caniuse.com/#feat=matchmedia))
+- [matchMedia.addListener polyfill](https://github.com/paulirish/matchMedia.js) ([optional](http://caniuse.com/#feat=matchmedia))
 
 ---
 
