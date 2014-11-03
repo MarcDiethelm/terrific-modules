@@ -16,7 +16,7 @@ The connector callback `onViewportChange` receives a simple data object containi
 - `query` {Object}
     - `query.name` contains the viewport name
     - `query.string` the matched media query.
-- `state` {'match'|'setup'} -  _setup_ is sent during page load only, _match_ during pge load and all viewport changes.
+- `state` {'match'|'setup'} -  _setup_ is sent for first matches only, _match_ for first and subsequent matches.
 
 ## Dependencies
 
