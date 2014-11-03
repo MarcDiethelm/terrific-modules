@@ -12,6 +12,11 @@ For an example how to consume the events see _Media-Event-Consumer_ module, whic
 
 Depends on Enquire.js and for older browsers a matchMedia/matchMedia.addListener polyfill. Both are already present in `lib/`.
 
+This JS-only module must be registered with code in the Terrific bootstrap.
+`
+app.registerModule($body, 'MediaEvent');
+`
+
 The connector callback `onViewportChange` receives a simple data object containing two properties:
 - `query` {Object}
     - `query.name` contains the viewport name
